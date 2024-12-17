@@ -1,6 +1,6 @@
 # General:
 aws_region                = "us-east-1"
-aws_profile               = "terraform-admin"
+#aws_profile               = "terraform-admin"
 availability_zones        = ["us-east-1a", "us-east-1b", "us-east-1c"]
 tags                      = {
     repositorio = "git@github.com:hdbarrios/devops-g6-pin2.git"
