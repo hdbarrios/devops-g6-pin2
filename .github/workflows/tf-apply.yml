@@ -51,7 +51,12 @@ jobs:
       working-directory: terraform-apache
       run: |
        terraform plan -var-file=profiles/pin2.tfvars -out=tfplan -detailed-exitcode 
-       echo $? 
+       echo $? ' exitcode'
+       echo -e 'Exitcode Help:'
+       echo -e '  0: No hay cambios'
+       echo -e '  1: Ocurrió un error'
+       echo -e '  2: Se detectaron cambios'
+       echo -e 'datiled-exitcode: '`echo $?`
 
     - name: Terraform apply
       if: github.event_name == 'push'  # Solo en push a master (es decir, cuando el PR se mergea)
