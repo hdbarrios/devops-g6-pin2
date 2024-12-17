@@ -1,6 +1,6 @@
 provider "aws" {
   region  = var.aws_region                            # Región de AWS
-  profile = var.aws_profile                      # Perfil configurado con acceso programático
+  #profile = var.aws_profile                      # Perfil configurado con acceso programático
 }
 
 # Leer la clave pública desde el archivo .pem
