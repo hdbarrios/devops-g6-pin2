@@ -1,8 +1,8 @@
 name: Terraform Destroy
 on:
  workflow_dispatch:
-    branches:
-      - master
+   branches:
+     - master
 
 jobs:
  tf-destroy:
@@ -15,7 +15,7 @@ jobs:
 
    steps:
      - uses: actions/checkout@v4
-      with:
+       with:
           #ref: ${{ github.event.pull_request.head.sha }} # se refiere al commit más reciente del branch de origen del PR (es decir, el branch desde el cual se hizo el pull request).
           ref: ${{ github.sha }} # github.sha hace referencia al commit hash del evento actual, que es el commit específico que activó el workflow. En el caso de un push o un pull_request, este es el commit que causó que el workflow se ejecutara.
           submodules: true
