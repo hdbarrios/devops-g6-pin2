@@ -1,0 +1,49 @@
+name: Terraform Destroy
+on:
+ workflow_dispatch:
+    branches:
+      - master
+
+jobs:
+ tf-destroy:
+   runs-on: ubuntu-latest
+   env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'us-east-1'
+      TERRAFORM_VERSION: "1.10.2"
+
+   steps:
+     - uses: actions/checkout@v4
+      with:
+          #ref: ${{ github.event.pull_request.head.sha }} # se refiere al commit más reciente del branch de origen del PR (es decir, el branch desde el cual se hizo el pull request).
+          ref: ${{ github.sha }} # github.sha hace referencia al commit hash del evento actual, que es el commit específico que activó el workflow. En el caso de un push o un pull_request, este es el commit que causó que el workflow se ejecutara.
+          submodules: true
+          fetch-depth: 1
+
+    - name: Install Terraform
+      run: |
+        tf_version=$TERRAFORM_VERSION
+        wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
+        unzip terraform_"$tf_version"_linux_amd64.zip
+        sudo mv terraform /usr/local/bin/
+
+    - name: Verify Terraform version
+      run: terraform version
+
+    - name: Terraform init
+      working-directory: terraform-apache
+      run: |
+        terraform init -input=false
+        #terraform init -input=false -backend-config="profile=terraform-admin"
+
+    - name: Terraform validation
+      working-directory: terraform-apache
+      run: |
+        terraform validate
+
+    - name: Terraform destroy
+      working-directory: terraform-apache
+      id: destroy
+      run: |
+        terraform destroy -auto-approved

@@ -11,6 +11,11 @@ on:
 jobs:
   terraform_apply:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'us-east-1'
+      TERRAFORM_VERSION: "1.10.2"
 
     steps:
     - uses: actions/checkout@v4
@@ -21,8 +26,6 @@ jobs:
           fetch-depth: 1
 
     - name: Install Terraform
-      env:
-        TERRAFORM_VERSION: "1.10.2"
       run: |
         tf_version=$TERRAFORM_VERSION
         wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
@@ -34,9 +37,6 @@ jobs:
 
     - name: Terraform init
       working-directory: terraform-apache
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         terraform init -input=false
         #terraform init -input=false -backend-config="profile=terraform-admin"
