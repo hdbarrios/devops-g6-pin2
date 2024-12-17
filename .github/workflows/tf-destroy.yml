@@ -47,3 +47,4 @@ jobs:
       id: destroy
       run: |
         terraform destroy -var-file=profiles/pin2.tfvars -auto-approved
+
