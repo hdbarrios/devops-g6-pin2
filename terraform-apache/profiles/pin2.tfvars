@@ -18,7 +18,7 @@ create_private_subnet     = true
 create_public_subnet      = true
 
 # EC2:
-ec2_ami                   = "ami-00eb69d236edcfaf8"   # Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
+ec2_ami                   = "ami-0e2c8caa4b6378d8c"   # Ubuntu Server 22.04 LTS (HVM), SSD Volume Type
 ec2_storage_type          = "gp2"
 ec2_storage               = 40   # Tamaño del volumen en GB
 ec2_instance_type         = "t2.micro"
