@@ -5,21 +5,21 @@ on:
      - master
 
 jobs:
- tf-destroy:
-   runs-on: ubuntu-latest
-   env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: 'us-east-1'
-      TERRAFORM_VERSION: "1.10.2"
+  terraform-destroy:
+    runs-on: ubuntu-latest
+    env:
+       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+       AWS_REGION: 'us-east-1'
+       TERRAFORM_VERSION: "1.10.2"
 
-   steps:
-     - uses: actions/checkout@v4
-       with:
-          #ref: ${{ github.event.pull_request.head.sha }} # se refiere al commit más reciente del branch de origen del PR (es decir, el branch desde el cual se hizo el pull request).
-          ref: ${{ github.sha }} # github.sha hace referencia al commit hash del evento actual, que es el commit específico que activó el workflow. En el caso de un push o un pull_request, este es el commit que causó que el workflow se ejecutara.
-          submodules: true
-          fetch-depth: 1
+    steps:
+    - uses: actions/checkout@v4
+      with:
+         #ref: ${{ github.event.pull_request.head.sha }} # se refiere al commit más reciente del branch de origen del PR (es decir, el branch desde el cual se hizo el pull request).
+         ref: ${{ github.sha }} # github.sha hace referencia al commit hash del evento actual, que es el commit específico que activó el workflow. En el caso de un push o un pull_request, este es el commit que causó que el workflow se ejecutara.
+         submodules: true
+         fetch-depth: 1
 
     - name: Install Terraform
       run: |
