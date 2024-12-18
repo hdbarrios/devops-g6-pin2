@@ -116,23 +116,25 @@ Usando **`create_backen.sh`** , si no tienes el archivo `~/.aws/config` creado, 
 _(sea conseja si tienes más de una cuenta por
 administrar usar profiles)_
 
-<style>
-  .zoom img {
-    transition: transform 0.2s; /* Suaviza el zoom */
-  }
-  .zoom img:hover {
-    transform: scale(1.33); /* Escala la imagen al 133% */
-    z-index: 1000; /* Asegura que se superponga a otros elementos */
-  }
-</style>
-
-<div style="text-align: center;" class="zoom">
-  <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="width: 75%;">
-  <img src="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" alt="Descripción alternativa" style="width: 75%;">
-  <img src="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" alt="Descripción alternativa" style="width: 75%;">
-  <img src="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" alt="Descripción alternativa" style="width: 75%;">
-  <img src="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" alt="Descripción alternativa" style="width: 75%;">
-  <img src="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" alt="Descripción alternativa" style="width: 75%;">
+<div style="text-align: center;">
+  <a href="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="display: block; margin: auto; width: 75%;">
+  </a>
+  <a href="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" alt="Descripción alternativa" style="width: 75%;">
+  </a>
+  <a href="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" alt="Descripción alternativa" style="width: 75%;">
+  </a>
+  <a href="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" alt="Descripción alternativa" style="width: 75%;">
+  </a>
+  <a href="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" alt="Descripción alternativa" style="width: 75%;">
+  </a>
+  <a href="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" target="_blank">
+    <img src="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" alt="Descripción alternativa" style="width: 75%;">
+  </a>
 </div>
 
 ### Evaluar código terraform y credenciales aws:
