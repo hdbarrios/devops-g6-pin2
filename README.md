@@ -31,14 +31,14 @@ Estructura del proyecto:
 .
 #   Github Actions:
 ├── .github
-|    └── workflows
-|        ├── tf-apply.yml
-|        └── tf-destroy.yml
+│    └── workflows
+│        ├── tf-apply.yml
+│        └── tf-destroy.yml
 #   Documentación:
 ├── docs
 │   ├── imgs
 │   │   ├── Screenshotfrom2024-12-1714-32-05.png
-|   |   ├── ....
+│   │   ├── ....
 │   │   └── Screenshotfrom2024-12-1809-26-16.png
 │   └── PIN- ETAPA 2.pdf
 ├── README.md
