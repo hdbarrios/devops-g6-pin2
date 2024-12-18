@@ -46,5 +46,6 @@ jobs:
       working-directory: terraform-apache
       id: destroy
       run: |
-        terraform apply -destroy -var-file=profiles/pin2.tfvars -auto-approve
+        terraform destroy -var-file=profiles/pin2.tfvars -auto-approve
+        #terraform apply -destroy -var-file=profiles/pin2.tfvars -auto-approve
 
