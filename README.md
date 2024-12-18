@@ -40,6 +40,7 @@ Estructura del proyecto:
 │   │   ├── Screenshotfrom2024-12-1714-32-05.png
 │   │   ├── ....
 │   │   └── Screenshotfrom2024-12-1809-26-16.png
+│   ├── DevOps2403 - Grupo 6 - devops-pin2.pdf
 │   └── PIN- ETAPA 2.pdf
 ├── README.md
 #   Codigo terraform:
