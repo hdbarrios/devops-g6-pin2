@@ -359,9 +359,9 @@ Si todo sale bien, se podrá observar la IP pública de la instancia y si la usa
 
 Si se ejecuta de nuevo el workflow `Terraform-Apply` indicará que no existen cambios por aplicar.
 
-Estatus del Workflow sobre elcommit-merge:
+Estatus del Workflow sobre el commit-merge.
 
 Al finalizar se observa failed o successful dependiendo el estado del job,para elejemplo: “Sucessful”
 
-El Workflow `Terraform-Destroy` solo se ejecutara ondeman:
+El Workflow `Terraform-Destroy` solo se ejecutara on-demand:
 
