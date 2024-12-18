@@ -121,8 +121,9 @@ administrar usar profiles)_
     <tr>
       <td>
         <a href="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" target="_blank">
+        <p align="center">
           <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
+        </p></a>
       </td>
     </tr>
     <tr>
