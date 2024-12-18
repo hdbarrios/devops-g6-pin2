@@ -117,52 +117,38 @@ _(sea conseja si tienes más de una cuenta por
 administrar usar profiles)_
 
 <div style="text-align: center;">
-  <table>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" target="_blank">
-        <p align="center">
-          <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="width: 75%;">
-        </p></a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" target="_blank">
-          <img src="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" target="_blank">
-          <img src="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" target="_blank">
-          <img src="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" target="_blank">
-          <img src="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" target="_blank">
-          <img src="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" alt="Descripción alternativa" style="width: 75%;">
-        </a>
-      </td>
-    </tr>
-  </table>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1714-36-18.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1714-36-49.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-13-20.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-16-18.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
 </div>
+
 
 
 
