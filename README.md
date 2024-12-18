@@ -26,6 +26,40 @@ _“GHActions-apache–AWS”_
 
 - https://github.com/hdbarrios/devops-g6-pin
 
+Estructura del proyecto:
+``` sh
+.
+#   Github Actions:
+├── .github
+|    └── workflows
+|        ├── tf-apply.yml
+|        └── tf-destroy.yml
+#   Documentación:
+├── docs
+│   ├── imgs
+│   │   ├── Screenshotfrom2024-12-1714-32-05.png
+|   |   ├── ....
+│   │   └── Screenshotfrom2024-12-1809-26-16.png
+│   └── PIN- ETAPA 2.pdf
+├── README.md
+#   Codigo terraform:
+└── terraform-apache
+    ├── backend.tf
+    ├── create_backend.sh
+    ├── ec2.tf
+    ├── outputs.tf
+    ├── profiles
+    │   ├── apache-key.pem
+    │   ├── apache-key.pub
+    │   ├── grupo6.png
+    │   ├── pin2.tfvars
+    │   └── provision.sh
+    ├── terraform-plan.txt
+    ├── tfplan
+    ├── variables.tf
+    └── vpc.tf
+```
+
 ## Objetivos:
 
 - Instalar terraform
@@ -116,7 +150,7 @@ Usando **`create_backen.sh`** , si no tienes el archivo `~/.aws/config` creado, 
 _(sea conseja si tienes más de una cuenta por
 administrar usar profiles)_
 
-<div style="text-align: center;">
+<!--div style="text-align: center;">
   <p align="center">
     <a href="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" target="_blank">
       <img src="docs/imgs/Screenshotfrom2024-12-1809-26-16.png" alt="Descripción alternativa" style="width: 75%;">
@@ -147,10 +181,7 @@ administrar usar profiles)_
       <img src="docs/imgs/Screenshotfrom2024-12-1715-17-37.png" alt="Descripción alternativa" style="width: 75%;">
     </a>
   </p>
-</div>
-
-
-
+</div-->
 
 ### Evaluar código terraform y credenciales aws:
 
@@ -165,12 +196,35 @@ necesariosyconfigurarátubackend(siloestásusando).
 
 Este comandose ejecuta una sola vez cuando configuras un nuevo proyecto Terraform o cuando haces cambios en los proveedores y módulos.
 
+<!--div style="text-align: center;">
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-30-48.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-30-48.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+</div-->
+
 #### 2.Verificar la configuración (Planificación)
 
 Para revisar qué cambios realizará Terraform en tu infraestructura, se puede ejecutar el comando terraform plan.Este comando no realizará ningún cambio, solo mostrará una descripción detallada delo que se va a hacer.
 
 `terraform plan -var-file=profiles/pin2.tfvars -out=tfplan`
+
+<!-- div style="text-align: center;">
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-37-53.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-37-53.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+</div>
 ...
+<div style="text-align: center;">
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-38-17.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-38-17.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+</div -->
 
 Para este proyecto se debe especificar el archivo de variables `pin2.tfvars` con la opción `-var-file` para que Terraform use las configuraciones definidas en ese archivo.
 
@@ -198,7 +252,36 @@ Si todo estábien con el `tf-plan` y se puede aplicar los cambios,ejecuta:
 
 Terraform pedirá confirmación antes deproceder.Al estar seguro de que los cambios son correctos, se escribe `yes` para confirmar.
 
+<!-- div style="text-align: center;">
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-49-28.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-49-28.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+</div>
 ...
+<div style="text-align: center;">
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1715-49-46.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1715-49-46.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1716-00-48.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1716-00-48.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1716-01-08.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1716-01-08.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+  <p align="center">
+    <a href="docs/imgs/Screenshotfrom2024-12-1716-06-06.png" target="_blank">
+      <img src="docs/imgs/Screenshotfrom2024-12-1716-06-06.png" alt="Descripción alternativa" style="width: 75%;">
+    </a>
+  </p>
+</div-->
 
 #### 4.Ver los resultados de la aplicación
 
@@ -233,12 +316,6 @@ Si se necesita destruir todos los recursos que has creado (por ejemplo,para prob
 `terraform destroy -var-file=profiles/pin2.tfvars`
 
 Terraform solicitara confirmación. Escribe `yes` para proceder.
-
-
-...
-
-...
-
 
 ### GitHub Actions:
 
@@ -276,20 +353,15 @@ on:
       - master
 ```
 
-Ejemplo de ejecución con PR:
-
+<!--Ejemplo de ejecución con PR:-->
 
 Si todo sale bien, se podrá observar la IP pública de la instancia y si la usamos para navegar en un browser podremos ver la ejecución del apache:
 
 Si se ejecuta de nuevo el workflow `Terraform-Apply` indicará que no existen cambios por aplicar.
 
-
 Estatus del Workflow sobre elcommit-merge:
-
 
 Al finalizar se observa failed o successful dependiendo el estado del job,para elejemplo: “Sucessful”
 
-
 El Workflow `Terraform-Destroy` solo se ejecutara ondeman:
 
-...
